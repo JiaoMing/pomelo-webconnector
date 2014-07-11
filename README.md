@@ -6,8 +6,8 @@ pomelo-webconnector
 
 创建pomelo项目 替换pomelo在connectorConfig中定义的connector
 
-// app configuration
-app.configure('production|development', 'connector', function(){
+// app configuration \n\r
+app.configure('production|development', 'connector', function(){\n\r
   app.set('connectorConfig',
     {
       connector : webconnector.webconnector,
