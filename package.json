@@ -1,8 +1,32 @@
 {
-    "name":"pomelo-webconnector",
-    "version":"0.0.1",
-    "private":false,
-    "dependencies":{
-        "pomelo":"1.0.1"
-    }
+  "name": "pomelo-webconnector",
+  "version": "0.0.2",
+  "private": false,
+  "dependencies": {
+    "pomelo": "1.0.1",
+	"express":"4.5.x"
+  },
+  "description": "pomelo connector for http/https",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biggerbang/pomelo-webconnector.git"
+  },
+  "keywords": [
+    "pomleo",
+    "connector",
+    "http",
+    "https"
+  ],
+  "author": "biggerbang",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/biggerbang/pomelo-webconnector/issues"
+  }
 }
