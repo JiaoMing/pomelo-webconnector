@@ -1,0 +1,9 @@
+{
+    "name":"examples",
+    "version":"0.0.1",
+    "private":false,
+    "dependencies":{
+        "pomelo":"1.0.1"
+    }
+}
+
