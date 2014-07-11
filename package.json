@@ -24,8 +24,8 @@
     "http",
     "https"
   ],
-  "author": "biggerbang",
-  "license": "BSD-2-Clause",
+  "author": "miaomiao",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/biggerbang/pomelo-webconnector/issues"
   }
