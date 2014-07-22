@@ -1,9 +1,8 @@
 {
   "name": "pomelo-webconnector",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "dependencies": {
-    "pomelo": "1.0.1",
 	"express":"4.5.x"
   },
   "description": "pomelo connector for http/https",
