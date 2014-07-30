@@ -3,7 +3,6 @@
   "version": "0.0.7",
   "private": false,
   "dependencies": {
-	"express":"4.5.x"
   },
   "description": "pomelo connector for http/https",
   "main": "index.js",
