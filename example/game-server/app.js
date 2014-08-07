@@ -13,6 +13,7 @@ app.configure('production|development', 'connector', function(){
   app.set('connectorConfig',
     {
       connector : webconnector.webconnector,
+      methods:'all',/// 'get' or 'post' 'all' = 'get' & 'post'
       useSSL:true,
       ssl:{
           key:fs.readFileSync('../shared/server.key'),
