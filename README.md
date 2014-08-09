@@ -7,35 +7,22 @@ pomelo-webconnector
 创建pomelo项目 替换pomelo在connectorConfig中定义的connector
 
 // app configuration
-
 app.configure('production|development', 'connector', function(){
-
   app.set('connectorConfig',
-  
     {
       connector : webconnector.webconnector,
-      
+        methods:'all', /// 'get' or 'post' and 'all' = 'get' & 'post'
         useSSL:false,
-        
         ssl:{
-        
             //key:fs.readFileSync('./config/server.key'),
-            
             //cert:fs.readFileSync('./config/server.crt')
-            
         }
-        
     });
 });
 
 参数支持 useSSL:true 代表使用https协议 必须加载ssl证书 userSSL:false 代表使用http协议
 
 设置完成后即可使用任意语言的http通信服务器
-
-注意问题:
-
-因为需求短连接,这种方式驱动pomelo会导致pomelo的sessionService失效(session生命周期伴随http消息的返回或者断开后销毁)
-而不能使用pomelo的channelService做消息推送(因本人接触js node express pomeo时间不久暂时无法编码兼容pomelo的session 这个demo也是第一次使用git 第一次上传npm项目 如有bug 错误 或者 有朋友高论赐教也好 探讨也好 请联系我 QQ:332850358)
 
 
 使用须知:
@@ -50,3 +37,12 @@ app.configure('production|development', 'connector', function(){
 2. 消息正文 body 
 
   必须为JSON格式的字符串传递
+  
+3. 本包内包含了几个库的版本,使用前请确认和项目的版本一致:
+  pomelo : '1.0.3'
+  如果和pomelo项目版本不一致会启动不起来的,解决办法是到modules的pomelo-webconnector目录的node-modules删除pomelo文件夹
+  pomelo-logger: '0.1.5'
+  如果版本不一致,日志不能刷新到本地日志文件内
+  express: '4.8.1'
+  
+  
