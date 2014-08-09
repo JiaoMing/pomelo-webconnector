@@ -1,12 +1,12 @@
 pomelo-webconnector
 
-基于pomelo架构自定义connector 让pomelo支持http https协议
+基于pomelo架构自定义connector 支持http/https协议驱动pomelo运行.
 
 安装: npm install pomelo-webconnector
 
 创建pomelo项目 替换pomelo在connectorConfig中定义的connector
 
-<
+{
 app.configure('production|development', 'connector', function(){
     app.set('connectorConfig',
         {
@@ -23,7 +23,8 @@ app.configure('production|development', 'connector', function(){
             }
         });
 });
->
+}
+
 
 参数支持 useSSL:true 代表使用https协议 必须加载ssl证书 userSSL:false 代表使用http协议
 
