@@ -6,17 +6,22 @@ pomelo-webconnector
 
 创建pomelo项目 替换pomelo在connectorConfig中定义的connector
 
+
 app.configure('production|development', 'connector', function(){
-  app.set('connectorConfig',
-    {
-      connector : webconnector.webconnector,
-        methods:'all', /// 'get' or 'post' and 'all' = 'get' & 'post'
-        useSSL:false,
-        ssl:{
-            //key:fs.readFileSync('./config/server.key'),
-            //cert:fs.readFileSync('./config/server.crt')
-        }
-    });
+    app.set('connectorConfig',
+        {
+            /// 使用第三方web-connector作为pomelo的connector通信协议
+            /// methods: 'all' 'post' 'get'
+            /// useSSL true false
+            /// ssl openssl 证书
+            connector : webconnector.webconnector,
+            methods:'all',
+            useSSL:false,
+            ssl:{
+                key:fs.readFileSync('../shared/server.key'),
+                cert:fs.readFileSync('../shared/server.crt')
+            }
+        });
 });
 
 参数支持 useSSL:true 代表使用https协议 必须加载ssl证书 userSSL:false 代表使用http协议
